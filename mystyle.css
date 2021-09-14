@@ -1,3 +1,19 @@
+html {
+  height: 100%;
+  /* max-height: 600px; */
+  width: 1000px;
+  background-color: hsla(200, 40%, 30%, 0.4);
+  background-image: url("https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dmlydHVhbCUyMGNvbmNlcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80");
+
+  background-repeat: repeat-x;
+  background-position: 0 20%, 0 100%, 0 50%, 0 100%, 0 0;
+  background-size: 2500px, 800px, 500px 200px, 1000px, 400px 260px;
+  animation: 50s para infinite linear;
+}
+
+
+
+
 //navbar
 
 * {
