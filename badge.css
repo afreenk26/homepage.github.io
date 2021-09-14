@@ -1,0 +1,87 @@
+//badge
+
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+$primary-color: #ff5f15;
+$easing: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+$base-size: 30rem;
+
+html {
+  height: 100%;
+  /* max-height: 600px; */
+  width: 1000px;
+  background-color: hsla(200, 40%, 30%, 0.4);
+  background-image: url("https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dmlydHVhbCUyMGNvbmNlcnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80");
+
+  background-repeat: repeat-x;
+  background-position: 0 20%, 0 100%, 0 50%, 0 100%, 0 0;
+  background-size: 2500px, 800px, 500px 200px, 1000px, 400px 260px;
+  animation: 50s para infinite linear;
+}
+
+@keyframes para {
+  100% {
+    background-position: -5000px 20%, -800px 95%, 500px 50%, 1000px 100%,
+      400px 0;
+  }
+  @media (max-width: ($base-size * 1.6)) {
+    font-size: 12px;
+  }
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  display: block;
+  position: relative;
+  width: $base-size;
+  height: $base-size;
+  cursor: pointer;
+  background: url(https://taarangana.com/img/darshan1.jpg) no-repeat 100% 50%;
+  background-size: 160%;
+  border-radius: 50%;
+  transition: $easing;
+  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.75);
+
+  &:hover {
+    box-shadow: 0px 0.5rem 2rem rgba(0, 0, 0, 0.75);
+    background-position: 0% 50%;
+
+    .text {
+      transform: rotate(-45deg) translate(0px) rotate(-315deg);
+      background: rgba($primary-color, 0.5);
+      width: $base-size;
+      letter-spacing: 1rem;
+      line-height: $base-size;
+      height: $base-size;
+      margin-top: -($base-size / 2);
+      margin-left: -($base-size / 2);
+      transition: $easing, letter-spacing 1.5s ease-out;
+    }
+  }
+
+  .text {
+    display: block;
+    position: absolute;
+    width: ($base-size / 2);
+    height: ($base-size / 2);
+    line-height: ($base-size / 2);
+    left: 50%;
+    top: 50%;
+    margin-top: -($base-size / 4);
+    margin-left: -($base-size / 4);
+    font-size: 2rem;
+    font-family: Raleway, sans-serif;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background: $primary-color;
+    transform: rotate(-180deg) translate(-($base-size / 2)) rotate(180deg);
+    box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    transition: $easing;
+  }
+}
