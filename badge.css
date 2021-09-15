@@ -1,66 +1,55 @@
-//badge
-
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
-$primary-color: #ff5f15;
-$easing: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-$base-size: 30rem;
-
-
-
-body {
-  min-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ body {
+	 min-height: 100%;
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
 }
-
-.badge {
-  display: block;
-  position: relative;
-  width: $base-size;
-  height: $base-size;
-  cursor: pointer;
-  background: url(https://taarangana.com/img/darshan1.jpg) no-repeat 100% 50%;
-  background-size: 160%;
-  border-radius: 50%;
-  transition: $easing;
-  box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.75);
-
-  &:hover {
-    box-shadow: 0px 0.5rem 2rem rgba(0, 0, 0, 0.75);
-    background-position: 0% 50%;
-
-    .text {
-      transform: rotate(-45deg) translate(0px) rotate(-315deg);
-      background: rgba($primary-color, 0.5);
-      width: $base-size;
-      letter-spacing: 1rem;
-      line-height: $base-size;
-      height: $base-size;
-      margin-top: -($base-size / 2);
-      margin-left: -($base-size / 2);
-      transition: $easing, letter-spacing 1.5s ease-out;
-    }
-  }
-
-  .text {
-    display: block;
-    position: absolute;
-    width: ($base-size / 2);
-    height: ($base-size / 2);
-    line-height: ($base-size / 2);
-    left: 50%;
-    top: 50%;
-    margin-top: -($base-size / 4);
-    margin-left: -($base-size / 4);
-    font-size: 2rem;
-    font-family: Raleway, sans-serif;
-    text-align: center;
-    color: #fff;
-    border-radius: 50%;
-    background: $primary-color;
-    transform: rotate(-180deg) translate(-($base-size / 2)) rotate(180deg);
-    box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.5);
-    transition: $easing;
-  }
+ .badge {
+	 display: block;
+	 position: relative;
+	 width: 30rem;
+	 height: 30rem;
+	 cursor: pointer;
+	 background: url(https://taarangana.com/img/darshan1.jpg) no-repeat 100% 50%;
+	 background-size: 160%;
+	 border-radius: 50%;
+	 transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+	 box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.75);
 }
+ .badge:hover {
+	 box-shadow: 0px 0.5rem 2rem rgba(0, 0, 0, 0.75);
+	 background-position: 0% 50%;
+}
+ .badge:hover .text {
+	 transform: rotate(-45deg) translate(0px) rotate(-315deg);
+	 background: rgba(255, 95, 21, 0.5);
+	 width: 30rem;
+	 letter-spacing: 1rem;
+	 line-height: 30rem;
+	 height: 30rem;
+	 margin-top: -15rem;
+	 margin-left: -15rem;
+	 transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
+}
+ .badge .text {
+	 display: block;
+	 position: absolute;
+	 width: 15rem;
+	 height: 15rem;
+	 line-height: 15rem;
+	 left: 50%;
+	 top: 50%;
+	 margin-top: -7.5rem;
+	 margin-left: -7.5rem;
+	 font-size: 2rem;
+	 font-family: Raleway, sans-serif;
+	 text-align: center;
+	 color: #fff;
+	 border-radius: 50%;
+	 background: #ff5f15;
+	 transform: rotate(-180deg) translate(-15rem) rotate(180deg);
+	 box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.5);
+	 transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+ 
