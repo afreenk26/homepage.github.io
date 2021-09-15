@@ -11,6 +11,16 @@ html {
   animation: 50s para infinite linear;
 }
 
+@keyframes para {
+  100% {
+    background-position: -5000px 20%, -800px 95%, 500px 50%, 1000px 100%,
+      400px 0;
+  }
+  @media (max-width: ($base-size * 1.6)) {
+    font-size: 12px;
+  }
+}
+
 
 
 
